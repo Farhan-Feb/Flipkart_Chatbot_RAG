@@ -39,7 +39,7 @@ def data_ingestion(status):
         return vstore, []
 
 if __name__ == "__main__":
-    vstore, insert_ids = data_ingestion("done")
+    vstore, insert_ids = data_ingestion(None)
     print(f"\nInserted {len(insert_ids)} documents.")
     results = vstore.similarity_search("Can you tell me the low budget sound basshead?")
     for res in results:
